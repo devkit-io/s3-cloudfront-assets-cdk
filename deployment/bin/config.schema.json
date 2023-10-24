@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CDK Configuration",
+  "required": [
+    "repoName"
+  ],
+  "properties": {
+    "repoName": {
+      "type": "string",
+      "description": "The name of the repository."
+    },
+    "certificateArn": {
+      "type": "string",
+      "pattern": "^arn:aws:acm:[a-z0-9-]+:[0-9]{12}:certificate/[a-z0-9-]+$",
+      "description": "The ARN for the AWS Certificate Manager certificate."
+    },
+    "domainName": {
+      "type": "string",
+      "description": "The domain name for the deployment."
+    }
+  }
+}
